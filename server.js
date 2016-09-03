@@ -185,5 +185,7 @@ app.post('/sendcode', function(request, response){
   }
 });
 
-app.listen(3000);
+app.listen(process.env.PORT, '0.0.0.0', function(err) {
+  console.log("Started listening on %s", app.url);
+});
 console.log('Express server listening on port ' + app.get('port'));
