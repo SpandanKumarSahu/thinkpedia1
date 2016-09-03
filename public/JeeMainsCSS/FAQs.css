@@ -1,0 +1,21 @@
+#divFAQs h4{
+    cursor: pointer;
+}
+#divFAQs ul ul{
+    display:none;
+    font-size: 1.1em;
+}
+#divFAQs a{
+    text-decoration: None;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2em;
+
+    padding:0.1em;
+}
+#divFAQs ul :first-child ul{
+    display: block;
+}
+#divFAQs ul{
+    list-style: none;
+}

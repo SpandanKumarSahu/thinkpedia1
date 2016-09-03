@@ -1,0 +1,58 @@
+/**
+ * Created by PSB on 03-06-2016.
+ */
+$("#div_content").on('scroll', function () {
+
+    if($("#c2").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(2)").css("background-color","silver");
+    }
+    else{
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(1)").css("background-color","silver");
+    }
+    if($("#divExamDetails").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(3)").css("background-color","silver");
+    }
+    if($("#c3").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(4)").css("background-color","silver");
+    }
+    if($("#divApplicationProcedure").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(5)").css("background-color","silver");
+    }
+    if($("#divDocs").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(6)").css("background-color","silver");
+    }
+    if($("#divRegistrationFee").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(7)").css("background-color","silver");
+    }
+    if($("#divSyllabus").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(8)").css("background-color","silver");
+    }
+    if($("#divBooks").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(9)").css("background-color","silver");
+    }
+    if($("#divCoachings").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(10)").css("background-color","silver");
+    }
+    if($("#divPreviousPapers").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(11)").css("background-color","silver");
+    }
+    if($("#divPreviousStats").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(12)").css("background-color","silver");
+    }
+    if($("#divFAQs").offset().top<65){
+        $("#ln>ul>li").css("background-color","#f5f8fa");
+        $("#ln>ul>li:nth-child(13)").css("background-color","silver");
+    }
+});

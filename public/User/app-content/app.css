@@ -1,0 +1,153 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat);
+#divMain{
+    display: none;
+    padding:2em;
+    font-family: montserrat,"Lucida Console", Monaco, monospace;
+    color: #333;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#divContentUser{
+    width:18em;
+    margin:30px auto;
+    padding:2em;
+    background-color: #eee;
+    border-radius: 2px;
+    border: 3px rgba(0,0,0,0.8) groove;
+
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.8);
+}
+.form-actions{
+    text-align: center;
+}
+
+#divContentUser h2{
+    display: block;
+    font-size: 30px;
+}
+#divContentUser label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+#divContentUser input{
+    box-sizing: border-box;
+    display: block;
+    width:100%;
+    height:34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#divContentUser h2 {
+    text-align: center;
+}
+
+#divContentUser a {
+    color: #fff;
+    background: #27AE60;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    border:0 none;
+    width: 100px;
+    border-radius: 1px;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+#divContentUser a:hover, #divContentUser a:focus{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+#divContentUser button{
+    color: #fff;
+    background: #27AE60;
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border:0 none;
+    border-radius: 1px;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+#divContentUser button:hover,#divContentUser button:focus{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+#divContentUser .btn.disabled, #divContentUser .btn[disabled], #divContentUser fieldset[disabled] .btn {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+#divContentUser .has-error .help-block, #divContentUser .has-error .control-label, #divContentUser .has-error .radio, #divContentUser .has-error .checkbox, #divContentUser .has-error .radio-inline, #divContentUser .has-error .checkbox-inline {
+    color: #a94442;
+}
+
+#divContentUser .help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373;
+}
+
+
+
+#divContentUser .alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+#divContentUser .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}

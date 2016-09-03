@@ -1,0 +1,134 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link type="text/css" rel="stylesheet" href="LandPageCSS+JS/landPage1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+
+    <link href="User/app-content/app.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="navBar">
+        <div id="nav">
+            <div id="logo">
+                <img id="logoImage" src="ImagesLandPage/Logo_279_3.png"/>
+                <a id="logoName" href="index30.html">LetStudy</a>
+            </div>
+            <div id="searchB">
+                <input id="inp" placeholder="Type to search"/>
+                <a onclick="fn()" href="#" id="searchbutton"><img id="searchbuttonimg" src="ImagesLandPage/5.png" ></a>
+                <a id="signin" href="#/login" onclick="flogin()">Sign In</a>
+                <a id="signup" href="#/register" onclick="fregister()">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <div id="navShadow"></div>
+
+    <div id="divMain">
+        <div id="divContentUser">
+            <div>
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="divContent">
+
+        <div id="p1" class="parallax">
+            <h1>Information that Matters</h1>
+            <h2 id="knowMore"><a href="index30.html">Know More</a></h2>
+        </div>
+
+        <div id="p2" class="parallax">
+            <div id="p21">
+                <img id="imgP21" src="ImagesLandPage/answer-sheet-with-pencil.jpg"/>
+                <p>Exhaustive, Integrated and Accurate information about the exam that you're interested in</p>
+            </div>
+            <div id="p22">
+                <img id="imgP22" src="ImagesLandPage/Mobile-App.jpg"/>
+                <p>Access all the information on a single platform in a much simplified manner</p>
+
+            </div>
+            <div id="p23">
+                <img id="imgP23" src="ImagesLandPage/bell-1096280_960_720.png"/>
+                <p>Don't worry about missing the deadlines.<br/> We will notify you</p>
+            </div>
+        </div>
+
+        <div id="p3" class="parallax">
+            <div id="divImgTablet">
+                <img id="imgTablet" src="ImagesLandPage/Hand-Holding-Tablet-PNG-Image.png" />
+            </div>
+            <div id="divDetails">
+                <ul>
+                    <li><h2>Get Notifications</h2></li>
+                    <li><h2>Get Notifications</h2></li>
+                    <li><h2>Get Notifications</h2></li>
+                    <li><h2>Get Notifications</h2></li>
+                </ul>
+            </div>
+        </div>
+        <div id="p4" class="parallax">
+            <h1>About Us</h1>
+        </div>
+
+    </div>
+
+    <script src="LandPageCSS+JS/ScrollFade.js"></script>
+
+
+    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+
+    <script src="User/app.js"></script>
+    <script src="User/app-services/authentication.service.js"></script>
+    <script src="User/app-services/flash.service.js"></script>
+
+    <script src="User/app-services/user.service.local-storage.js"></script>
+
+    <script src="User/home/home.controller.js"></script>
+    <script src="User/login/login.controller.js"></script>
+    <script src="User/register/register.controller.js"></script>
+    <script>
+        var flogin = function() {
+            document.getElementById('divMain').style.display = "block";
+        };
+        var fregister = function() {
+            document.getElementById('divMain').style.display = "block";
+
+        };
+        var modal = document.getElementById('divMain');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '318220035190461',
+                xfbml      : true,
+                version    : 'v2.7'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>

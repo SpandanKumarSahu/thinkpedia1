@@ -1,0 +1,41 @@
+#divRegistrationFee table{
+    table-layout: fixed;
+    width:80%;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 0 auto;
+}
+#divRegistrationFee td, #divRegistrationFee th{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding:0.4em;
+}
+#divBooks table{
+    width: 100%;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+#divBooks td, #divBooks th{
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#divBooks tr> :first-child{
+    width:10%;
+}
+#divBooks tr> :nth-child(2){
+    width:30%;
+}
+#divBooks tr{
+    height:3em;
+}
+#divCoachings table{
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    max-width: 90%;
+    table-layout: auto;
+}
+#divCoachings td, #divCoachings th{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding:0.4em;
+}

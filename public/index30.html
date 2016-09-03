@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <title>LetStudy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/stylesheet30.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/ImportantDates.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/eligCriteria.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/divSyllabus.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/RegistraionFeeTable.css">
+    <link type="text/css" rel="stylesheet" href="JeeMainsCSS/FAQs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div id="div_navbar">
+    <div id="nav">
+        <div id="nav_bar_left" align="left">
+            <button id="menu1"><img src="Images/ic_menu_black_24dp_1x.png" /></button>
+            <div id="logo">
+                <a href="#" title="LetStudy" id="logoimagelink"><img id="logoimage" src="Images/Logo_279_3.png"/></a>
+                <a class="navbar-brand" href="#" title="LetStudy" id="logoname">LetStudy</a>
+            </div>
+        </div>
+        <div id="nav_bar_right" align="right">
+            <input id="inp" placeholder="Type to search"/>
+            <a onclick="fn()" href="#" id="searchbutton"><img id="searchbuttonimg" src="Images/5.png" ></a>
+            <a id="signin" href="#">Sign In</a>
+            <a id="signup" href="#">Sign Up</a>
+        </div>
+    </div>
+</div>
+
+<div id="div_content">
+    <div id="ln">
+        <ul>
+            <li><a href="#">JEE (Advanced)</a></li>
+            <li><a href="#c2">Important Dates</a></li>
+            <li><a href="#divExamDetails">Exam Details<button class="bLeftSubMenu" onclick="f4()"><img id="arroww3" src="Images/ic_keyboard_arrow_down_black_24dp_1x.png"/></button></a>
+                <ul id="examDetailsSM">
+                    <li><a href="#examDetails1">Exam Pattern</a></li>
+                    <li><a href="#examDetails2">Duration of Exam</a></li>
+                    <li><a href="#examDetails3">About Question Paper</a></li>
+                    <li><a href="#examDetails4">Medium of Question Paper</a></li>
+                </ul>
+            </li>
+            <li><a href="#c3">Eligibility Criteria<button class="bLeftSubMenu" onclick="f2()"><img id="arroww1" src="Images/ic_keyboard_arrow_down_black_24dp_1x.png"/></button></a>
+                <ul id="eligCritSM">
+                    <li><a href="#eligCrit1">Performance in JEE Mains</a></li>
+                    <li><a href="#eligCrit2">Age Limit</a></li>
+                    <li><a href="#eligCrit3">Number of Attempts</a></li>
+                    <li><a href="#eligCrit4">Appearance in Class XII or Equivalent Exams</a></li>
+                    <li><a href="#eligCrit5">Earlier admission in IITs</a></li>
+                </ul>
+            </li>
+            <li><a href="#divApplicationProcedure">Application Procedure<button class="bLeftSubMenu" onclick="f5()"><img id="arroww4" src="Images/ic_keyboard_arrow_down_black_24dp_1x.png"/></button></a>
+                <ul id="applicationProcedureSM">
+                    <li><a href="#applicationProcedure1">Mode of Application</a></li>
+                    <li><a href="#applicationProcedure2">Procedure of Application</a></li>
+                    <li><a href="#applicationProcedure3">Application Form Link</a></li>
+                    <li><a href="#applicationProcedure4">Mode of Payment</a></li>
+                    <li><a href="#applicationProcedure5">Offline Application</a></li>
+                    <li><a href="#applicationProcedure6">Application Procedure for Re-appearing Candidates</a></li>
+                    <li><a href="#applicationProcedure7">Sample Registration Form filled</a></li>
+                    <li><a href="#applicationProcedure8">Procedure Flow Chart</a></li>
+                </ul>
+            </li>
+            <li><a href="#divDocs">Important Documents</a></li>
+            <li><a href="#divRegistrationFee">Registration Fee</a></li>
+            <li><a href="#divSyllabus">Syllabus<button class="bLeftSubMenu" onclick="f3()"><img id="arroww2" src="Images/ic_keyboard_arrow_down_black_24dp_1x.png"/></button></a>
+                <ul id="syllabusSM">
+                    <li><a href="#phyButton">Physics</a></li>
+                    <li><a href="#chemButton">Chemistry</a></li>
+                    <li><a href="#mathsButton">Maths</a></li>
+                </ul>
+            </li>
+            <li><a href="#divBooks">Important Books</a></li>
+            <li><a href="#divCoachings">Coaching Institutes</a></li>
+            <li><a href="#divPreviousPapers">Previous Year Papers</a></li>
+            <li><a href="#divPreviousStats">Previous Year Stats</a></li>
+            <li><a href="#divFAQs">FAQs</a></li>
+
+        </ul>
+    </div>
+
+
+
+    <div id="rn" ng-app="myApp" ng-controller="Ctrl1">
+        <h4>NEWS</h4>
+        <ul>
+            <li ng-repeat="x in abc"><a href="{{x.Country}}">{{x.Name}}</a></li>
+        </ul>
+    </div>
+    <div id="center">
+        <div id="slideshow">
+            <button id="bb1"><img id="b1"/></button>
+            <a id="slideshowPhotoLink" target="_blank"><img id="photoo"/></a>
+            <button id="bb2"><img id="b2"/></button>
+        </div>
+
+        <div id="c1" class="cc">
+            Indian Institutes of Technology (IITs) are institutions of national importance established through Acts of Parliament for fostering excellence in education. Over the years, IITs have created a world class educational platform that is dynamically sustained through quality teaching and internationally acclaimed research with excellent infrastructure and the best available minds. The faculty and alumni of IITs occupy key positions in academia and industry, both in India and abroad, and continue to make a considerable impact in all sections of the society. At present, there are twenty two IITs across the country.
+            <br/>The primary objective of IITs are as follows:
+            <ul>
+            <li>To create an environment that encourages freedom of thought and pursuit of excellence, and inculcates the necessary vision and self-discipline to achieve excellence.</li>
+            <li>To build a solid foundation of scientific and technical knowledge and to prepare competent and motivated engineers and scientists.</li>
+            <li>To kindle an entrepreneurial spirit among the students.</li>
+            <li>To prepare the students to become outstanding professionals and contribute to nation-building.</li>
+            </ul>
+        </div>                              <!--Introduction-->
+
+        <div id="c2" class="cc">
+            <h2 class="divHeading">Important Dates</h2>
+            <table class="tableDates">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>12-5-2016</td>
+                    <td>Happy b'day JEE</td>
+                </tr>
+                <tr>
+                    <td>12-5-2016</td>
+                    <td>Happy b'day JEE</td>
+                </tr>
+                <tr>
+                    <td>12-5-2016</td>
+                    <td>Happy b'day JEE</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="ImpDateButtonDiv">
+                <button id="bDates" onclick="f1()" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><img src="Images/ic_keyboard_arrow_down_black_24dp_1x.png" /></button>
+            </div>
+            <div id="demo" class="collapse">
+                <table class="tableDates">
+                    <tbody>
+                    <tr>
+                        <td>12-5-2016</td>
+                        <td>Happy b'day JEE</td>
+                    </tr>
+                    <tr>
+                        <td>12-5-2016</td>
+                        <td>Happy b'day JEE</td>
+                    </tr>
+                    <tr>
+                        <td>12-5-2016</td>
+                        <td>Happy b'day JEE</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>                              <!--Important Dates-->
+
+        <div id="divExamDetails" class="cc">
+            <h2 class="divHeading">Exam Details</h2>
+            <h4 class="divSubHeading" id="examDetails1">Exam Pattern</h4>
+            <ul>Objective (multiple choice and numerical answer type) </ul><br/>
+            <h4 class="divSubHeading" id="examDetails2">Duration of Exam</h4>
+            <ul>JEE Advanced consists of 2 papers, both the papers are on the same day. Both the papers are of 3 hours separated by a gap of 2 hours.</ul><br/>
+            <h4 class="divSubHeading" id="examDetails3">About Question Paper</h4>
+            <ul>
+                <li>Consists of 2 papers, both are compulsory.</li>
+                <li>Each paper will consist of three separate sections, viz., Physics, Chemistry and Mathematics.</li>
+                <li>The question paper will be in either English or Hindi (not in both). Change of question paper language will NOT be entertained after the registration.</li>
+                <li>Negative marks will be awarded for incorrect answers to some of the questions. The instruction for negative marks will be given in the instruction section in the paper.</li>
+            </ul><br/>
+            <h4 class="divSubHeading" id="examDetails4">Medium of Question Paper</h4>
+            <ul>Question paper is available in only 2 medium (English and Hindi). Candidates can chose only one medium, as the question paper in examination will come in one language.</ul>
+        </div>                  <!--Exam Details-->
+
+        <div id="c3" class="cc">
+            <h2 class="divHeading">Eligibility Criteria</h2>
+            <h4 id="eligCrit1" class="divSubHeading">Performance in JEE Mains</h4>
+            <ul>Candidates should be among top 2,00,000 by scoring positive marks in paper - 1 of JEE (mains)<br/>
+                How are the top 2,00,000 decided?</ul>
+            <table class="tableElig">
+                <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Category</th>
+                    <th colspan="2">Number of top candidates</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td><td>OPEN</td><td>97,970</td><td rowspan="2">Total 1,01,000</td>
+                </tr>
+                <tr>
+                    <td>2</td><td>OPEN-PwD</td><td>3,030</td>
+                </tr>
+                <tr>
+                    <td>3</td><td>OBC-NCL</td><td>52,380</td><td rowspan="2">Total 54,000</td>
+                </tr>
+                <tr>
+                    <td>4</td><td>OBC-NCL-PwD</td><td>1,620</td>
+                </tr>
+                <tr>
+                    <td>5</td><td>SC</td><td>29,100</td><td rowspan="2">Total 30,000</td>
+                </tr>
+                <tr>
+                    <td>6</td><td>SC-Pwd</td><td>900</td>
+                </tr>
+                <tr>
+                    <td>7</td><td>ST</td><td>14,550</td><td rowspan="2">Total 15,000</td>
+                </tr>
+                <tr>
+                    <td>8</td><td>ST-Pwd</td><td>450</td>
+                </tr>
+
+                </tbody>
+            </table>
+            <br/>
+            <h4 id="eligCrit2" class="divSubHeading">Age Limit</h4>
+            <ul>Candidates should have been born on or after October 1, 1991.
+                    Five years relaxation is given to SC, ST and PwD candidates,
+                    i.e., these candidates should have been
+                    born on or after October 1, 1986.</ul>
+            <br/>
+            <h4 id="eligCrit3" class="divSubHeading">Number of Attempts</h4>
+            <ul>A candidate can appear in the exam only twice.  Both the attempts should be consecutive.
+                 The first attempt should be the same year as the year for passing class 12th (first time).</ul>
+            <br/>
+            <h4 id="eligCrit4" class="divSubHeading">Appearance in class XII or Equivalent Exam</h4>
+            <ul>A candidate should have appeared for the class XII or equivalent
+                exam for the first time in all the subject in the same year or previous year of appearing for JEE advanced</ul>
+            <br/>
+            <h4 id="eligCrit5" class="divSubHeading">Earlier Admission in IITs</h4>
+            <ul>
+                <li>If you have accepted a seat (or admitted) in IIT: Then you are not allowed to appear in the exam next year.</li>
+                <li>If you have taken admission in preparatory course at IIT : Then you are allowed to appear in the exam
+                    next year if you meet the other requirements listed in eligibility criterion.</li>
+                <li>If you have accepted a seat in NITs/IIITs/Other GFTIs through JoSAA 2015 and meets the requirement
+                    listed in the eligibility criterion, no matter what the candidate has done in the previous year,
+                    he/she will be allowed to appear in JEE advanced exam.</li>
+                <li>If you did not get a seat in the seat allocation: Then you are allowed to appear in the exam next year.</li>
+            </ul>
+        </div>                              <!--Eligibility Criteria-->
+
+        <div id="divApplicationProcedure" class="cc">
+            <h2 class="divHeading">Application Procedure</h2>
+
+            <h4 class="divSubHeading" id="applicationProcedure1">Mode of Application</h4>
+            <ul>There is only one mode of application: "Online Mode"
+                Candidates can not apply offline.</ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure2">Procedure of application</h4>
+            <ul>
+                The candidates have to apply online at online registration portal
+                Link for the online registration portal is given below:<br/>
+                <a href="http://www.jeeadv.ac.in" target="_blank">www.jeeadv.ac.in</a>
+            </ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure3">Application Form Link</h4>
+            <ul><a href="http://jeeadv.nic.in/jeeadvapp/root/loginpage.aspx" target="_blank">http://jeeadv.nic.in/jeeadvapp/root/loginpage.aspx</a></ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure4">Mode of payment</h4>
+            <ul>
+                Following are the modes of payment, using which candidate can pay the jee Advanced 2016 application fee.
+                <ul>
+                <li><b>Debit Card/Credit Card/Internet Banking: </b>After completion of the above steps, the candidate will click on “Pay Registration Fee”, this will lead to automatic redirection to the State Bank Multi Option Payment System (MOPS) page. The candidate can select any of the options Debit Card/Credit Card/Internet Banking as per the convenience. After successful completion of the payment registration details with unique registration number will be generated. The candidate must take a hard copy of it.</li>
+                <li><b>SBI Branch: </b>The candidate can also opt for payment through cash mode. Candidates need to click on “Pay Registration Fee”, it will again lead to redirection to the MOPS Page. Now the candidate needs to select the option “SBI Branch” the system will automatically generate the challan. Now take a print out of system generated challan and take it to the SBI branch for the cash payment. After payment, the candidate has to visit the webpage again and download the registration details.</li>
+                <li><b>Dubai Exam Centre: </b>Candidates who are taking the exam in Dubai are required to pay USD 220. The mode of payment would be international Debit/Credit card issued by the foreign bank outside India. The payment will not be accepted if the card through payment is being made is issued within India. Candidates must download the registration details after successful completion of payment.</li>
+                </ul>
+            </ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure5">Offline Application</h4>
+            <ul>Application forms are not available offline.</ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure6">Application procedure for re-appearing candidates</h4>
+            <ul>Application procedure is same for all the candidates</ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure7">Sample registration  form filled</h4>
+            <ul>Will be updated as soon as the online registration portal becomes active.</ul><br/>
+
+            <h4 class="divSubHeading" id="applicationProcedure8">Procedure Flow Chart</h4>
+            <ul>Will be Updated Soon</ul>
+        </div>         <!--Application Procedure-->
+
+        <div id="divDocs" class="cc">
+            <h2 class="divHeading">Important Documents</h2>
+            <h3>Will Be Updated Soon</h3>
+        </div>
+
+        <div id="divRegistrationFee" class="cc">
+            <h2 class="divHeading">Registration Fee</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>For INDIAN exam centres</th>
+                    <th>Registration Fee</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Female Candidates (all categories)</td>
+                    <td>INR 1,000</td>
+                </tr>
+                <tr>
+                    <td>SC, ST, PwD Candidates (male)</td>
+                    <td>INR 1,000</td>
+                </tr>
+                <tr>
+                    <td>All other Candidates</td>
+                    <td>INR 2,000</td>
+                </tr>
+                <tr>
+                    <th>For DUBAI exam center</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>All Candidates</td>
+                    <td>USD 220</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>              <!--Registration Fee-->
+
+         <div id="divSyllabus" class="cc">
+            <h2 class="divHeading">Syllabus</h2>
+
+            <h3 id="phyButton">Physics</h3>
+            <div id="Phy" class="syllabi">
+
+                <h4 class="divSubHeading">General</h4>
+                <ul>
+                    Units and dimensions, dimensional analysis; least count,
+                    significant figures; Methods of measurement and error analysis
+                    for physical quantities pertaining to the following experiments:
+                    Experiments based on using Vernier calipers and screw gauge (micrometer),
+                    Determination of g using simple pendulum,
+                    Young’s modulus by Searle’s method, Specific heat of a liquid using calorimeter,
+                    focal length of a concave mirror and a convex lens using u-v method,
+                    Speed of sound using resonance column, Verification of Ohm’s law using voltmeter and ammeter,
+                    and specific resistance of the material of a wire using meter bridge and post office box.
+                </ul>
+
+
+                <h4 class="divSubHeading">Mechanics</h4>
+                <ul>
+                    <li>Kinematics in one and two dimensions (Cartesian coordinates only), projectiles; Uniform Circular motion; Relative velocity.</li>
+                    <li>Newton’s laws of motion; Inertial and uniformly accelerated frames of reference; Static and dynamic friction; Kinetic and potential energy; Work and power; Conservation of linear momentum and mechanical energy.</li>
+                    <li>Systems of particles; Centre of mass and its motion; Impulse; Elastic and inelastic collisions.</li>
+                    <li>Law of gravitation; Gravitational potential and field; Acceleration due to gravity; Motion of planets and satellites in circular orbits; Escape velocity.</li>
+                    <li>Rigid body, moment of inertia, parallel and perpendicular axes theorems, moment of inertia of uniform bodies with simple geometrical shapes; Angular momentum; Torque; Conservation of angular momentum; Dynamics of rigid bodies with fixed axis of rotation; Rolling without slipping of rings, cylinders and spheres; Equilibrium of rigid bodies; Collision of point masses with rigid bodies.</li>
+                    <li>Linear and angular simple harmonic motions.</li>
+                    <li>Hooke’s law, Young’s modulus.</li>
+                    <li>Pressure in a fluid; Pascal’s law; Buoyancy; Surface energy and surface tension, capillary rise; Viscosity (Poiseuille’s equation excluded), Stoke’s law; Terminal velocity, Streamline flow, equation of continuity, Bernoulli’s theorem and its applications.</li>
+                    <li>Wave motion (plane waves only), longitudinal and transverse waves, superposition of waves; Progressive and stationary waves; Vibration of strings and air columns; Resonance; Beats; Speed of sound in gases; Doppler effect (in sound).</li>
+                </ul>
+
+
+                <h4 class="divSubHeading">Thermal Physics</h4>
+                <ul>
+                    Thermal expansion of solids, liquids and gases; Calorimetry, latent heat; Heat conduction in one dimension; Elementary concepts of convection and radiation; Newton’s law of cooling; Ideal gas laws; Specific heats (Cv and Cp for monoatomic and diatomic gases); Isothermal and adiabatic processes, bulk modulus of gases; Equivalence of heat and work; First law of thermodynamics and its applications (only for ideal gases); Blackbody radiation: absorptive and emissive powers; Kirchhoff’s law; Wien’s displacement law, Stefan’s law.
+                </ul>
+
+
+                <h4 class="divSubHeading">Electricity and Magnetism</h4>
+                <ul>
+                    <li>Coulomb’s law; Electric field and potential; Electrical potential energy of a system of point charges and of electrical dipoles in a uniform electrostatic field; Electric field lines; Flux of electric field; Gauss’s law and its application in simple cases, such as, to find field due to infinitely long straight wire, uniformly charged infinite plane sheet and uniformly charged thin spherical shell.</li>
+                    <li>Capacitance; Parallel plate capacitor with and without dielectrics; Capacitors in series and parallel; Energy stored in a capacitor.</li>
+                    <li>Electric current; Ohm’s law; Series and parallel arrangements of resistances and cells; Kirchhoff’s laws and simple applications; Heating effect of current.</li>
+                    <li>Biot–Savart’s law and Ampere’s law; Magnetic field near a current-carrying straight wire, along the axis of a circular coil and inside a long straight solenoid; Force on a moving charge and on a current-carrying wire in a uniform magnetic field.</li>
+                    <li>Magnetic moment of a current loop; Effect of a uniform magnetic field on a current loop; Moving coil galvanometer, voltmeter, ammeter and their conversions.</li>
+                    <li>Electromagnetic induction: Faraday’s law, Lenz’s law; Self and mutual inductance; RC, LR and LC circuits with d.c. and a.c. sources.</li>
+                </ul>
+
+
+                <h4 class="divSubHeading">Optics</h4>
+                <ul>
+                    <li>Rectilinear propagation of light; Reflection and refraction at plane and spherical surfaces; Total internal reflection; Deviation and dispersion of light by a prism; Thin lenses; Combinations of mirrors and thin lenses; Magnification.</li>
+                    <li>Wave nature of light: Huygen’s principle, interference limited to Young’s double-slit experiment</li>
+                </ul>
+
+
+                <h4 class="divSubHeading">Modern Physics</h4>
+                <ul>
+                    <li>Atomic nucleus; α, β and γ radiations; Law of radioactive decay; Decay constant; Half-life and mean life; Binding energy and its calculation; Fission and fusion processes; Energy calculation in these processes.</li>
+                    <li>Photoelectric effect; Bohr’s theory of hydrogen-like atoms; Characteristic and continuous X-rays, Moseley’s law; de Broglie wavelength of matter waves</li>
+                </ul>
+                <br/>
+            </div>
+
+            <h3 id="chemButton">Chemistry</h3>
+            <div id="Chem" class="syllabi">
+
+                <br/>
+                <h4 class="divSubHeading">Physical Chemistry</h4>
+                <ul>
+                    <li>
+                        <b>General topics: </b>Concept of atoms and molecules; Dalton’s atomic theory; Mole concept; Chemical formulae; Balanced chemical equations; Calculations (based on mole concept) involving common oxidation-reduction, neutralisation, and displacement reactions; Concentration in terms of mole fraction, molarity, molality and normality.
+                    </li>
+                    <li>
+                        <b>Gaseous and liquid states: </b>Absolute scale of temperature, ideal gas equation; Deviation from ideality, van der Waals equation; Kinetic theory of gases, average, root mean square and most probable velocities and their relation with temperature; Law of partial pressures; Vapour pressure; Diffusion of gases.
+                    </li>
+                    <li>
+                        <b>Atomic structure and chemical bonding: </b>Bohr model, spectrum of hydrogen atom, quantum numbers; Wave-particle duality, de Broglie hypothesis; Uncertainty principle; Qualitative quantum mechanical picture of hydrogen atom, shapes of s, p and d orbitals; Electronic configurations of elements (up to atomic number 36); Aufbau principle; Pauli’s exclusion principle and Hund’s rule; Orbital overlap and covalent bond; Hybridisation involving s, p and d orbitals only; Orbital energy diagrams for homonuclear diatomic species; Hydrogen bond; Polarity in molecules, dipole moment (qualitative aspects only); VSEPR model and shapes of molecules (linear, angular, triangular, square planar, pyramidal, square pyramidal, trigonal bipyramidal, tetrahedral and octahedral).
+                    </li>
+                    <li>
+                        <b>Energetics: </b>First law of thermodynamics; Internal energy, work and heat, pressure-volume work; Enthalpy, Hess’s law; Heat of reaction, fusion and vapourization; Second law of thermodynamics; Entropy; Free energy; Criterion of spontaneity.
+                    </li>
+                    <li>
+                        <b>Chemical equilibrium: </b>Law of mass action; Equilibrium constant, Le Chatelier’s principle (effect of concentration, temperature and pressure); Significance of ΔG and ΔG0 in chemical equilibrium; Solubility product, common ion effect, pH and buffer solutions; Acids and bases (Bronsted and Lewis concepts); Hydrolysis of salts.
+                    </li>
+                    <li>
+                        <b>Electrochemistry: </b>Electrochemical cells and cell reactions; Standard electrode potentials; Nernst equation and its relation to ΔG; Electrochemical series, emf of galvanic cells; Faraday’s laws of electrolysis; Electrolytic conductance, specific, equivalent and molar conductivity, Kohlrausch’s law; Concentration cells.
+                    </li>
+                    <li>
+                        <b>Chemical kinetics: </b>Rates of chemical reactions; Order of reactions; Rate constant; First order reactions; Temperature dependence of rate constant (Arrhenius equation).
+                    </li>
+                    <li>
+                        <b>Solid state: </b>Classification of solids, crystalline state, seven crystal systems (cell parameters a, b, c, α, β, γ), close packed structure of solids (cubic), packing in fcc, bcc and hcp lattices; Nearest neighbours, ionic radii, simple ionic compounds, point defects.
+                    </li>
+                    <li>
+                        <b>Solutions: </b>Raoult’s law; Molecular weight determination from lowering of vapour pressure, elevation of boiling point and depression of freezing point.
+                    </li>
+                    <li>
+                        <b>Surface chemistry: </b>Elementary concepts of adsorption (excluding adsorption isotherms); Colloids: types, methods of preparation and general properties; Elementary ideas of emulsions, surfactants and micelles (only definitions and examples).
+                    </li>
+                    <li>
+                        <b>Nuclear chemistry: </b>Radioactivity: isotopes and isobars; Properties of α, β and γ rays; Kinetics of radioactive decay (decay series excluded), carbon dating; Stability of nuclei with respect to proton-neutron ratio; Brief discussion on fission and fusion reactions.
+                    </li>
+                </ul><br/>
+
+
+                <h4 class="divSubHeading">Inorganic Chemistry</h4>
+                <ul>
+                    <li>
+                        <b>Isolation/preparation and properties of the following non-metals: </b>Boron, silicon, nitrogen, phosphorus, oxygen, sulphur and halogens; Properties of allotropes of carbon (only diamond and graphite), phosphorus and sulphur.
+                    </li>
+                    <li>
+                        <b>Preparation and properties of the following compounds: </b>Oxides, peroxides, hydroxides, carbonates, bicarbonates, chlorides and sulphates of sodium, potassium, magnesium and calcium; Boron: diborane, boric acid and borax; Aluminium: alumina, aluminium chloride and alums; Carbon: oxides and oxyacid (carbonic acid); Silicon: silicones, silicates and silicon carbide; Nitrogen: oxides, oxyacids and ammonia; Phosphorus: oxides, oxyacids (phosphorus acid, phosphoric acid) and phosphine; Oxygen: ozone and hydrogen peroxide; Sulphur: hydrogen sulphide, oxides, sulphurous acid, sulphuric acid and sodium thiosulphate; Halogens: hydrohalic acids, oxides and oxyacids of chlorine, bleaching powder; Xenon fluorides.
+                    </li>
+                    <li>
+                        <b>Transition elements (3d series): </b>Definition, general characteristics, oxidation states and their stabilities, colour (excluding the details of electronic transitions) and calculation of spin-only magnetic moment; Coordination compounds: nomenclature of mononuclear coordination compounds, cis-trans and ionisation isomerisms, hybridization and geometries of mononuclear coordination compounds (linear, tetrahedral, square planar and octahedral).
+                    </li>
+                    <li>
+                        <b>Preparation and properties of the following compounds: </b>Oxides and chlorides of tin and lead; Oxides, chlorides and sulphates of Fe2+, Cu2+ and Zn2+; Potassium permanganate, potassium dichromate, silver oxide, silver nitrate, silver thiosulphate.
+                    </li>
+                    <li>
+                        <b>Ores and minerals: </b>Commonly occurring ores and minerals of iron, copper, tin, lead, magnesium, aluminium, zinc and silver.
+                    </li>
+                    <li>
+                        <b>Extractive metallurgy: </b>Chemical principles and reactions only (industrial details excluded); Carbon reduction method (iron and tin); Self reduction method (copper and lead); Electrolytic reduction method (magnesium and aluminium); Cyanide process (silver and gold).
+                    </li>
+                    <li>
+                        <b>Principles of qualitative analysis: </b>Groups I to V (only Ag+, Hg2+, Cu2+, Pb2+, Bi3+, Fe3+, Cr3+, Al3+, Ca2+, Ba2+, Zn2+, Mn2+ and Mg2+); Nitrate, halides (excluding fluoride), sulphate and sulphide.
+                    </li>
+                </ul><br/>
+
+                <h4 class="divSubHeading">Organic Chemistry</h4>
+                <ul>
+                    <li>
+                        <b>Concepts: </b>Hybridisation of carbon; σ and π-bonds; Shapes of simple organic molecules; Structural and geometrical isomerism; Optical isomerism of compounds containing up to two asymmetric centres, (R,S and E,Z nomenclature excluded); IUPAC nomenclature of simple organic compounds (only hydrocarbons, mono-functional and bi-functional compounds); Conformations of ethane and butane (Newman projections); Resonance and hyperconjugation; Keto-enoltautomerism; Determination of empirical and molecular formulae of simple compounds (only combustion method); Hydrogen bonds: definition and their effects on physical properties of alcohols and carboxylic acids; Inductive and resonance effects on acidity and basicity of organic acids and bases; Polarity and inductive effects in alkyl halides; Reactive intermediates produced during homolytic and heterolytic bond cleavage; Formation, structure and stability of carbocations, carbanions and free radicals.
+                    </li>
+                    <li>
+                        <b>Preparation, properties and reactions of alkanes: </b>Homologous series, physical properties of alkanes (melting points, boiling points and density); Combustion and halogenation of alkanes; Preparation of alkanes by Wurtz reaction and decarboxylation reactions.
+                    </li>
+                    <li>
+                        <b>Preparation, properties and reactions of alkenes and alkynes: </b>Physical properties of alkenes and alkynes (boiling points, density and dipole moments); Acidity of alkynes; Acid catalysed hydration of alkenes and alkynes (excluding the stereochemistry of addition and elimination); Reactions of alkenes with KMnO4 and ozone; Reduction of alkenes and alkynes; Preparation of alkenes and alkynes by elimination reactions; Electrophilic addition reactions of alkenes with X2, HX, HOX and H2O (X=halogen); Addition reactions of alkynes; Metal acetylides.
+                    </li>
+                    <li>
+                        <b>Reactions of benzene: </b>Structure and aromaticity; Electrophilic substitution reactions: halogenation, nitration, sulphonation, Friedel-Crafts alkylation and acylation; Effect of o-, m- and p-directing groups in monosubstituted benzenes.
+                    </li>
+                    <li>
+                        <b>Phenols: </b>Acidity, electrophilic substitution reactions (halogenation, nitration and sulphonation); Reimer-Tieman reaction, Kolbe reaction.
+                    </li>
+                    <li>
+                        <b>Characteristic reactions of the following (including those mentioned above): </b>Alkyl halides: rearrangement reactions of alkyl carbocation, Grignard reactions, nucleophilic substitution reactions; Alcohols: esterification, dehydration and oxidation, reaction with sodium, phosphorus halides, ZnCl2/concentrated HCl, conversion of alcohols into aldehydes and ketones; Ethers: Preparation by Williamson’s Synthesis; Aldehydes and Ketones: oxidation, reduction, oxime and hydrazone formation; aldol condensation, Perkin reaction; Cannizzaro reaction; haloform reaction and nucleophilic addition reactions (Grignard addition); Carboxylic acids: formation of esters, acid chlorides and amides, ester hydrolysis; Amines: basicity of substituted anilines and aliphatic amines, preparation from nitro compounds, reaction with nitrous acid, azo coupling reaction of diazonium salts of aromatic amines, Sandmeyer and related reactions of diazonium salts; carbylamine reaction; Haloarenes: nucleophilic aromatic substitution in haloarenes and substituted haloarenes (excluding Benzyne mechanism and Cine substitution).
+                    </li>
+                    <li>
+                        <b>Carbohydrates: </b>Classification; mono- and di-saccharides (glucose and sucrose); Oxidation, reduction, glycoside formation and hydrolysis of sucrose.
+                    </li>
+                </ul>
+
+
+
+                <br/>
+            </div>
+
+            <h3 id="mathsButton">Mathematics</h3>
+            <div id="Maths" class="syllabi">
+
+
+                <h4  class="divSubHeading">Trigonometry</h4>
+                <ul>
+                    <li>Trigonometric functions, their periodicity and graphs, addition and subtraction formulae, formulae involving multiple and sub-multiple angles, general solution of trigonometric equations.</li>
+                    <li>Relations between sides and angles of a triangle, sine rule, cosine rule, half-angle formula and the area of a triangle, inverse trigonometric functions (principal value only)</li>
+                </ul>
+
+                <h4 class="divSubHeading">Analytical Geometry</h4>
+                <ul>
+                    <li>Two dimensions: Cartesian coordinates, distance between two points, section formulae, shift of origin.</li>
+                    <li>Equation of a straight line in various forms, angle between two lines, distance of a point from a line; Lines through the point of intersection of two given lines, equation of the bisector of the angle between two lines, concurrency of lines; Centroid, orthocentre, incentre and circumcentre of a triangle.</li>
+                    <li>Equation of a circle in various forms, equations of tangent, normal and chord.</li>
+                    <li>Parametric equations of a circle, intersection of a circle with a straight line or a circle, equation of a circle through the points of intersection of two circles and those of a circle and a straight line.</li>
+                    <li>Equations of a parabola, ellipse and hyperbola in standard form, their foci, directrices and eccentricity, parametric equations, equations of tangent and normal.</li>
+                    <li>Locus problems.</li>
+                    <li>Three dimensions: Direction cosines and direction ratios, equation of a straight line in space, equation of a plane, distance of a point from a plane.</li>
+                </ul>
+
+
+                <h4 class="divSubHeading">Differential Calculus</h4>
+                <ul>
+                    <li>Real valued functions of a real variable, into, onto and one-to-one functions, sum, difference, product and quotient of two functions, composite functions, absolute value, polynomial, rational, trigonometric, exponential and logarithmic functions.</li>
+                    <li>Limit and continuity of a function, limit and continuity of the sum, difference, product and quotient of two functions, L’Hospital rule of evaluation of limits of functions.</li>
+                    <li>Even and odd functions, inverse of a function, continuity of composite functions, intermediate value property of continuous functions.</li>
+                    <li>Derivative of a function, derivative of the sum, difference, product and quotient of two functions, chain rule, derivatives of polynomial, rational, trigonometric, inverse trigonometric, exponential and logarithmic functions.</li>
+                    <li>Derivatives of implicit functions, derivatives up to order two, geometrical interpretation of the derivative, tangents and normals, increasing and decreasing functions, maximum and minimum values of a function, Rolle’s theorem and Lagrange’s mean value theorem.</li>
+                </ul>
+
+                <h4 class="divSubHeading">Integral Calculus</h4>
+                <ul>
+                    <li>Integration as the inverse process of differentiation, indefinite integrals of standard functions, definite integrals and their properties, fundamental theorem of integral calculus.</li>
+                    <li>Integration by parts, integration by the methods of substitution and partial fractions, application of definite integrals to the determination of areas involving simple curves.</li>
+                    <li>Formation of ordinary differential equations, solution of homogeneous differential equations, separation of variables method, linear first order differential equations.</li>
+                </ul>
+
+                <h4 class="divSubHeading">Vectors</h4>
+                <ul>
+                    Addition of vectors, scalar multiplication, dot and cross products, scalar triple products and their geometrical interpretations.
+                </ul>
+
+            </div>
+        </div>                     <!--Syllabus-->
+
+        <div id="divBooks" class="cc">
+            <h2 class="divHeading">Important Books</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Link</th>
+                    <th>Price</th>
+                    <th>Publication</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2">Physics</td>
+                    <td>Concepts of Physics</td>
+                    <td>H C Verma</td>
+                    <td><a href="http://www.junglee.com/Concepts-Physics-Vol-H-C-Verma/dp/8177091875" target="_blank">Click to Buy</a></td>
+                    <td>Rs 270</td>
+                    <td>paperback</td>
+                </tr>
+                <tr>
+                    <td>Fundamentals of Physics by Halliday, Resnick and Walker</td>
+                    <td>M K Singhal</td>
+                    <td><a href="http://www.amazon.in/Halliday-Resnick-Walker-Physics-Advanced/dp/8126547448" target="_blank">Click to Buy</a></td>
+                    <td>Rs 560</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Chemistry</td>
+                    <td>NCERTs</td>
+                    <td>NCERT</td>
+                    <td><a target="_blank" href="http://www.amazon.in/Chemistry-Part-Class-SET-BOOKS/dp/B0075MEXW2?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=e5a21af4-07b5-4c27-b2ad-1fe18268bf8a">Click to Buy</a></td>
+                    <td>Rs 380</td>
+                    <td>NCERT</td>
+                </tr>
+                <tr>
+                    <td>Organic Chemistry by Morrison & Boyd accompanied by the Study Guide</td>
+                    <td>Sonal Rajora</td>
+                    <td><a target="_blank" href="http://www.amazon.in/Organic-Chemistry-Robert-Thornton-Morrison/dp/8131793567/ref=sr_1_fkmr0_3?ie=UTF8&qid=1463962475&sr=8-3-fkmr0&keywords=Organic+Chemistry+by+Morrison+%26+Boyd+accompanied+by+the+Study+Guide">Click to Buy</a></td>
+                    <td>Rs 650</td>
+                    <td>Pearson</td>
+                </tr>
+                <tr>
+                    <td>Modern Approach to Chemical Calculations</td>
+                    <td>R C Mukherjee</td>
+                    <td><a target="_blank" href="http://www.amazon.in/Modern-Approach-Chemical-Calculations-Mukerjee/dp/8177096419">Click to Buy</a></td>
+                    <td>Rs 270</td>
+                    <td>paperback</td>
+                </tr>
+                <tr>
+                    <td>Maths</td>
+                    <td>Mathematics jee Advanced 2015</td>
+                    <td>MHE</td>
+                    <td><a target="_blank" href="http://www.amazon.in/Mathematics-jee-Advanced-2015-MHE/dp/9339205561">Click to Buy</a></td>
+                    <td>Rs 700</td>
+                    <td>TMH</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="divCoachings" class="cc">
+            <h2 class="divHeading">Coaching Institutes</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Admission Procedure</th>
+                </tr>
+                <tr>
+                    <td>Resonance Eduventures Ltd, Kota</td>
+                    <td>CG Tower, A-46 & 52, IPIA, Near City Mall, Jhalawar Road, Kota, Rajasthan 324005</td>
+                    <td><a href="https://www.resonance.ac.in/reso/admissions/intro-Ad-Proc.aspx" target="_blank">https://www.resonance.ac.in/reso/admissions/intro-Ad-Proc.aspx</a></td>
+                </tr>
+                <tr>
+                    <td>VIBRANT ACADEMY</td>
+                    <td>A-14(A), Vibrant Tower, Road No.1, Indraprastha Industrial Area, Kota, Rajasthan 324005</td>
+                    <td><a href="http://www.vibrantacademy.com/Courses/micro.aspx" target="_blank">http://www.vibrantacademy.com/Courses/micro.aspx</a></td>
+                </tr>
+                <tr>
+                    <td>ALLEN Career Institute</td>
+                    <td>Address: CP-6, Indra Vihar, Kota, Rajasthan 324005</td>
+                    <td><a href="http://allen.ac.in/apps1617/AppForms/Login.aspx" target="_blank">http://allen.ac.in/apps1617/AppForms/Login.aspx</a></td>
+                </tr>
+
+
+                </thead>
+            </table>
+        </div>
+
+        <div id="divPreviousPapers" class="cc">
+            <h2 class="divHeading">Previous Year Papers</h2>
+            <h3>Will Be Updated Soon</h3>
+        </div>
+
+        <div id="divPreviousStats" class="cc">
+            <h2 class="divHeading">Previous Year Stats</h2>
+            <h3>Will Be Updated Soon</h3>
+        </div>
+
+        <div id="divFAQs" class="cc">
+            <h2 class="divHeading">Frequently Asked Questions (FAQs)</h2>
+
+            <ul>
+                <li><a href="#" class="FAQsQuestion">Can I change the marked (bubbled) answers on the ORS?</a>
+                    <ul>No, because the bubble is filled using black ball point pen. Cant change once the bubble is filled.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">Is writing both paper-1 and paper-2 compulsory?</a>
+                    <ul>Yes, if a candidate is absent in any one of the paper, the candidate will be considered absent for the whole examination.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">How one can be eligible for re-appearing in JEE (advanced)?</a>
+                    <ul>There are 4 options:
+                    <ol>
+                        <li>If you have accepted a seat (or admitted) in IIT: Then you are not allowed to appear in the exam next year.</li>
+                        <li> If you have taken admission in preparatory course at IIT : Then you are allowed to appear in the exam next year if you meet the other requirements listed in eligibility criterion.</li>
+                        <li>If you have accepted a seat in NITs/IIITs/Other GFTIs through JoSAA 2015 and meets the requirement listed in the eligibility criterion, no matter what the candidate has done in the previous year, he/she will be allowed to appear in JEE advanced exam.</li>
+                        <li>If you did not get a seat in the seat allocation: Then you are allowed to appear in the exam next year.</li>
+                    </ol>
+                    <b>A candidate can appear in the exam only twice.  Both the attempts should be consecutive. The first attempt should be the same year as the year for passing class 12th (first time).</b>
+                    </ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">What type of quotas are available for admission into the IITs?</a>
+                    <ul>Only one quota, "All India". There is no home state quota or other state quota in IITs.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">I have declared my category wrong in JEE (mains) registration, can i register for JEE advanced with my corrrect category?</a>
+                    <ul>No, category can not be changed.<br/>
+                        If a candidate fails to provide the category certificate as per the prescribed format, then the candidate will be treated as a general category candidate.<br/>
+                        If a candidate has declared his/her category as OBC - NCL and he/she does not belongs to the NCL, then the candidate can declare that he/she does not belong to the NCL, and will further be treated as a general category candidate.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">Is Architecture Aptitude Test (AAT) compulsory?</a>
+                    <ul>No</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">What is the eligibility criterion for Architecture Aptitude Test (AAT)?</a>
+                    <ul>The candidates who qualify JEE (Advanced)  are eligible for AAT.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">How can a candidate get a seat under DS category?</a>
+                    <ul>DS category seats are for the children of defence / paramilitary personnel killed or permanently disabled in action during war or peacetime operations.</ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">Is it compulsory for the candidate to pay fee for both JEE (mains) and JEE (advanced)?</a>
+                    <ul>First of all, fee for both the exams are paid separately. Secondly, those candidates who qualify for JEE (advanced) will pay the fee to complete the further registration process. </ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">Who are foreign nationals?</a>
+                    <ul>Candidates who are NOT citizens of India (by birth or naturalized) at the time of registering for JEE (Advanced) are treated as foreign nationals. </ul><br/></li>
+                <li><a href="#" class="FAQsQuestion">Is every foreign national eligible to appear in JEE (advanced)?</a>
+                    <ul>Yes, every foreign national is eligible for the exam provided that the candidate fulfills the requirements listed in eligibililty criterion. Also,
+                        <ol>
+                            <li>The foreign nationals can be allotted seats upto 10 % of total number of seats in every course.</li>
+                            <li>OCI (Overseas citizen of India) / PIO (Person of Indian origin) card holders are treated as a candidate of general category. So there is no limit on the % of OCI / PIO card holders in any course.</li>
+                        </ol>
+                        <b>There is no reservation of seats for foreign nationals under any category (OBC-NCL, SC, ST, PwD)</b>
+                    </ul><br/></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script src="JeeMainsJS/slideshow.js"></script>
+<script src="JeeMainsJS/script30.js"></script>
+<script src="JeeMainsJS/ImpDateScript.js"></script>
+<script src="JeeMainsJS/LeftSubMenu.js"></script>
+<script src="JeeMainsJS/Syllabus.js"></script>
+<script src="JeeMainsJS/FAQs.js"></script>
+<script src="JeeMainsJS/NewsFeedImport.js"></script>
+<script src="JeeMainsJS/scrollFunction.js"></script>
+</body>
+</html>

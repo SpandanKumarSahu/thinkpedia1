@@ -1,0 +1,342 @@
+head, body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+
+#navShadow{
+    position:fixed;
+    width: 100%;
+    height:3.4em;
+    background-color: #333;
+    z-index: 998;
+    opacity: 0;
+    top:0;
+    left:0;
+}
+#navBar{
+    position:fixed;
+    width:100%;
+    padding:0 0.1em;
+    z-index: 999;
+    top:0;
+    left:0;
+}
+#nav{
+    margin: 0 0.1em;
+}
+#logo{
+    width: 11.8em;
+    height: 3.3em;
+    text-align: center;
+    margin-left: 1em;
+}
+#logoImage{
+    height:3.125em;
+}
+#logoName{
+    font-size: 2em;
+    display: block;
+    width:4em;
+    float:right;
+    margin-top: 0.2em;
+    margin-right: 0.3em;
+    text-decoration:none ;
+    color: White;
+}
+
+
+
+#searchB{
+    float:right;
+    margin-top: -2.6em;
+    width: 30em;
+    margin-right:1em;
+}
+#inp {
+    border-radius: 0.2em;
+    height:2em;
+    width: 17.5em;
+    float:left;
+    margin:-0.25em 0.13em 0.1em;
+    padding: 0.3em 2em 0.3em 0.5em;
+    background-color: transparent;
+    border: 1px white solid;
+}
+.inp1::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    white;
+}
+.inp1:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+}
+.inp1::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+}
+.inp1:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    white;
+}
+.inpGreen::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #6ab344;
+}
+.inpGreen:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #6ab344;
+}
+.inpGreen::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #6ab344;
+}
+.inpGreen:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #6ab344;
+}
+#inp:focus{
+    background-color: white;
+}
+#inp:focus::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #444444;
+}
+#inp:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #444444;
+    opacity:  1;
+}
+#inp:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #444444;
+    opacity:  1;
+}
+#inp:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #444444;
+}
+
+#searchbutton {
+    padding: 0;
+    float:left;
+    margin-left:-2.5em;
+    margin-top:-0.1em;
+
+}
+
+#searchbuttonimg {
+    height: 2.5em;
+    width: 2.5em;
+    margin-top: -0.2em;
+}
+
+#signin {
+    text-decoration: none;
+    font-size: 1.4em;
+    border-radius: 0.2em;
+    padding: 0.2em 0.4em;
+    margin-left: 1em;
+    color: white;
+}
+
+#signup {
+    text-decoration: none;
+    font-size: 1.4em;
+    color: white;
+
+    border-radius: 0.2em;
+    padding: 0.2em 0.4em;
+}
+
+
+
+
+
+#divContent{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.parallax{
+    position: relative;
+    padding: 25vh 10%;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+}
+
+#p1{
+    background: 50% 50% / cover;
+    background-image: url("../ImagesLandPage/421124.jpg");
+    background-attachment: fixed;
+    text-align: center;
+}
+
+#p1 h1{
+    text-align: center;
+    margin-top: 18vh;
+    color: white;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+#knowMore{
+    background-color: #333;
+    width:7em;
+    margin: -1.5em auto 0;
+    text-align: center;
+    border: none;
+    padding:0.3em;
+    border-radius: 10px;
+    font-weight: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#knowMore:hover{
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+}
+#knowMore a{
+    text-decoration:none;
+    color: #6ab344;
+    display: block;
+}
+
+
+
+#p2{
+    background-color: white;
+    height:69vh;
+    padding:0.8em 0.5em;
+
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+#p21{
+    height:341px;
+    width:303.8px;
+    background-color: #6ab344;
+
+}
+#imgP21{
+    width:100%;
+}
+
+#p22{
+    height:341px;
+    width:303.8px;
+    background-color: #333333;
+}
+#imgP22{
+    width: 100%;
+}
+
+#p23{
+    height:341px;
+    width:303.8px;
+    background-color: tomato;
+}
+#imgP23{
+    width: 70%;
+    margin-left: 14%;
+}
+
+
+#p2 p{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+#p3:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+
+
+    background: 50% 50% / cover;
+    background-image: url("../ImagesLandPage/library.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    text-align: center;
+    width: 100vw;
+}
+
+#p3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#divImgTablet{
+    height: 60vh;
+}
+#imgTablet{
+    margin-top:0.4em;
+    height:100%;
+}
+#divDetails{
+    color: white;
+    font-size: 1.3em;
+}
+
+#p4{
+    background-color: #333;
+    height:50vh;
+}
+
+/*
+@media all and (min-width:980px){
+
+}*/
+
+@media only screen and (max-width:980px) and (min-width:730px){
+    #p21, #p22, #p23{
+        height:341px;
+    }
+}
+
+@media only screen and (max-width:730px){
+    #logoName{
+        display: none;
+    }
+    #logoImage{
+        float: left;
+    }
+    #inp{
+        width:12.5em ;
+        display: none;
+    }
+    #searchbutton{
+        display: none;
+    }
+    #searchB{
+        width:14em;
+        float: right;
+        margin-right: 0;
+    }
+    .parallax{
+        padding: 20vh 5%;
+    }
+    #p2{
+        display: block;
+        height: auto;
+        padding: 0;
+        background-color: red;
+    }
+    #p21, #p22, #p23{
+        width:100%;
+        height: auto;
+        margin: 0;
+        padding-bottom: 0.8em;
+        box-shadow:0 -1px 10px rgba(0, 0, 0, .7);
+    }
+    #p2 p{
+        font-size: 1.3em;
+    }
+    #p1 h1{
+        font-size: 3em;
+    }
+    #divDetails{
+        display: none;
+    }
+}

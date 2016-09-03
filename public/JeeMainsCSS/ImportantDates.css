@@ -1,0 +1,41 @@
+#c2{
+    position:relative;
+    text-align: left;
+}
+
+table.tableDates{
+    margin:0 auto;
+    width: 90%;
+    table-layout: fixed;
+}
+#c2 h2{
+    border-bottom: 3px #ddd solid;
+}
+table.tableDates td,table.tableDates tr,table.tableDates th{
+    text-align: center;
+    border-bottom: 1px  solid #ddd;
+    padding:0.4em;
+}
+#ImpDateButtonDiv{
+    width:100%;
+    position: absolute;
+    left:0;
+    z-index:1;
+    bottom:  0.7em;
+    text-align: center;
+}
+#bDates{
+    margin: 0 auto;
+    border-radius: 100%;
+    z-index: 3;
+    border:none;
+    outline: white none;
+    vertical-align: middle;
+    width:2.8em;
+    height: 2.8em;
+    padding:0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#bDates:hover{
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+}
